@@ -10,7 +10,7 @@ const getHeadlines = async (date) => {
     const startTime = Math.round(new Date(date).getTime() / 1000) - (25 * 60 * 60);
     const res = await axios.get(`https://www.reddit.com/r/books/hot.json?limit=10&t=day`, {
         headers: {
-            'User-Agent': "hackernews-daily:bot:v1 (by /u/herseus)",
+            'User-Agent': "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",
         }
     });
     const top10Objs = response.data.data.children(-10);
