@@ -13,7 +13,7 @@ const getHeadlines = async (date) => {
             'User-Agent': "hackernews-daily:bot:v1 (by /u/herseus)",
         }
     });
-    const top10Objs = res.data.hits.slice(-10);
+    const top10Objs = response.data.data.children(-10);
     // console.log(top10Objs)
     const contents = top10Objs
       .map((obj, i) => {
