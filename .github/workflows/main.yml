@@ -22,7 +22,7 @@ jobs:
       working-directory: .
       # for github app auth
       env:
-        clientSecret: ${{ secrets.clientSecret }}
+        clientSecret: ${{ secrets.CLIENTSECRET }}
         privateKey: ${{ secrets.privateKey }}
         
         
