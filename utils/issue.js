@@ -12,9 +12,8 @@ try {
 const octokit = new Octokit({
   authStrategy: createAppAuth,
   auth: {
-    id: 75833,
-    installationId: 11101003,
-    clientId: "Iv1.8d2f7d117f535668",
+    id: 1872186,
+    clientId: "Iv23lisR6d1FmTgso1vD",
     clientSecret: process.env.clientSecret ? process.env.clientSecret : secrets.clientSecret,
     privateKey: process.env.privateKey ? process.env.privateKey : secrets.privateKey,
   },
