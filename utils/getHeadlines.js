@@ -8,7 +8,11 @@ const getHeadlines = async (date) => {
     const endTime = Math.round(new Date(date).getTime() / 1000);
     // 1 hour before start of the date (save missed posts)
     const startTime = Math.round(new Date(date).getTime() / 1000) - (25 * 60 * 60);
-    const res = await axios.get(`https://www.reddit.com/r/books/hot.json?limit=10&t=day`);
+    const res = await axios.get(`https://www.reddit.com/r/books/hot.json?limit=10&t=day`, {
+        headers: {
+            'User-Agent': "'hackernews-daily:bot:v1",
+        }
+    });
     const top10Objs = res.data.hits.slice(-10);
     // console.log(top10Objs)
     const contents = top10Objs
